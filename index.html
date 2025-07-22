@@ -92,6 +92,17 @@
     max-width: 100%;
     height: auto;
     }
+     /* Hide scrollbar across all browsers */
+.hide-scrollbar {
+  overflow-x: auto;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari, Opera */
+}
+
 
     </style>
 </head>
@@ -181,90 +192,107 @@
       <h2 class="text-3xl font-bold text-rose-red tracking-tight sm:text-4xl">Our Services</h2>
       <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-500">Empowering innovation through every stage of agile development.</p>
     </div>
-    <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
-      <!-- 1. Initialization -->
-      <div class="bg-white p-8 rounded-xl shadow-lg text-center animate-on-scroll">
-        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-rose-red text-white mx-auto mb-6">
-          <i class="fas fa-flag-checkered fa-2x"></i>
+
+    <!-- Horizontal Scroll Wrapper -->
+    <div class="mt-16 overflow-x-auto hide-scrollbar">
+      <div class="flex space-x-6 lg:space-x-8 min-w-max px-2 scroll-smooth snap-x snap-mandatory">
+        
+        <!-- Repeatable Service Card -->
+        <div class="bg-white p-8 rounded-xl shadow-lg text-center flex-shrink-0 w-72 snap-start animate-on-scroll">
+          <div class="flex items-center justify-center h-16 w-16 rounded-full bg-rose-red text-white mx-auto mb-6">
+            <i class="fas fa-flag-checkered fa-2x"></i>
+          </div>
+          <h3 class="text-xl font-bold text-navy">Initialization</h3>
+          <p class="mt-2 text-slate-500">Establishing project vision, goals, and scope to kickstart development.</p>
         </div>
-        <h3 class="text-xl font-bold text-navy">Initialization</h3>
-        <p class="mt-2 text-slate-500">Establishing project vision, goals, and scope to kickstart development.</p>
-      </div>
-      <!-- 2. Brainstorming -->
-      <div class="bg-white p-8 rounded-xl shadow-lg text-center animate-on-scroll delay-1">
-        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-rose-red text-white mx-auto mb-6">
-          <i class="fas fa-lightbulb fa-2x"></i>
+
+        <div class="bg-white p-8 rounded-xl shadow-lg text-center flex-shrink-0 w-72 snap-start animate-on-scroll delay-1">
+          <div class="flex items-center justify-center h-16 w-16 rounded-full bg-rose-red text-white mx-auto mb-6">
+            <i class="fas fa-lightbulb fa-2x"></i>
+          </div>
+          <h3 class="text-xl font-bold text-navy">Brainstorming</h3>
+          <p class="mt-2 text-slate-500">Collaborative idea generation to explore creative solutions.</p>
         </div>
-        <h3 class="text-xl font-bold text-navy">Brainstorming</h3>
-        <p class="mt-2 text-slate-500">Collaborative idea generation to explore creative solutions.</p>
-      </div>
-      <!-- 3. Research -->
-      <div class="bg-white p-8 rounded-xl shadow-lg text-center animate-on-scroll delay-2">
-        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-rose-red text-white mx-auto mb-6">
-          <i class="fas fa-search fa-2x"></i>
+
+        <div class="bg-white p-8 rounded-xl shadow-lg text-center flex-shrink-0 w-72 snap-start animate-on-scroll delay-2">
+          <div class="flex items-center justify-center h-16 w-16 rounded-full bg-rose-red text-white mx-auto mb-6">
+            <i class="fas fa-search fa-2x"></i>
+          </div>
+          <h3 class="text-xl font-bold text-navy">Research</h3>
+          <p class="mt-2 text-slate-500">Analyzing user needs and validating ideas with academic and market insights.</p>
         </div>
-        <h3 class="text-xl font-bold text-navy">Research</h3>
-        <p class="mt-2 text-slate-500">Analyzing user needs and validating ideas with academic and market insights.</p>
-      </div>
-      <!-- 4. Design -->
-      <div class="bg-white p-8 rounded-xl shadow-lg text-center animate-on-scroll delay-3">
-        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-rose-red text-white mx-auto mb-6">
-          <i class="fas fa-pencil-ruler fa-2x"></i>
-        </div>
-        <h3 class="text-xl font-bold text-navy">Design</h3>
-        <p class="mt-2 text-slate-500">Crafting intuitive interfaces and user journeys through prototypes and wireframes.</p>
-      </div>
-      <!-- 5. Development -->
-      <div class="bg-white p-8 rounded-xl shadow-lg text-center animate-on-scroll delay-4">
-        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-rose-red text-white mx-auto mb-6">
-          <i class="fas fa-code fa-2x"></i>
-        </div>
-        <h3 class="text-xl font-bold text-navy">Development</h3>
-        <p class="mt-2 text-slate-500">Building robust solutions using agile sprints and modular engineering.</p>
-      </div>
-      <!-- 6. Test -->
-      <div class="bg-white p-8 rounded-xl shadow-lg text-center animate-on-scroll delay-5">
-        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-rose-red text-white mx-auto mb-6">
-          <i class="fas fa-vial fa-2x"></i>
-        </div>
-        <h3 class="text-xl font-bold text-navy">Test</h3>
-        <p class="mt-2 text-slate-500">Verifying performance, reliability, and user experience through rigorous testing.</p>
-      </div>
-      <!-- 7. Incubation -->
-      <div class="bg-white p-8 rounded-xl shadow-lg text-center animate-on-scroll delay-6">
-        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-rose-red text-white mx-auto mb-6">
-          <i class="fas fa-seedling fa-2x"></i>
-        </div>
-        <h3 class="text-xl font-bold text-navy">Incubation</h3>
-        <p class="mt-2 text-slate-500">Refining and nurturing early-stage products with mentoring and iteration.</p>
-      </div>
-      <!-- 8. Patent -->
-      <div class="bg-white p-8 rounded-xl shadow-lg text-center animate-on-scroll delay-7">
-        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-rose-red text-white mx-auto mb-6">
-          <i class="fas fa-certificate fa-2x"></i>
-        </div>
-        <h3 class="text-xl font-bold text-navy">Patent</h3>
-        <p class="mt-2 text-slate-500">Protecting intellectual property and ensuring legal ownership of innovations.</p>
-      </div>
-      <!-- 9. Funding -->
-      <div class="bg-white p-8 rounded-xl shadow-lg text-center animate-on-scroll delay-8">
-        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-rose-red text-white mx-auto mb-6">
-          <i class="fas fa-hand-holding-usd fa-2x"></i>
-        </div>
-        <h3 class="text-xl font-bold text-navy">Funding</h3>
-        <p class="mt-2 text-slate-500">Securing financial support through grants, sponsorships, or investments.</p>
-      </div>
-      <!-- 10. Deployment -->
-      <div class="bg-white p-8 rounded-xl shadow-lg text-center animate-on-scroll delay-9">
-        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-rose-red text-white mx-auto mb-6">
-          <i class="fas fa-cloud-upload-alt fa-2x"></i>
-        </div>
-        <h3 class="text-xl font-bold text-navy">Deployment</h3>
-        <p class="mt-2 text-slate-500">Releasing validated products to users with monitoring, feedback, and support.</p>
+        <!-- 4. Design -->
+<div class="bg-white p-8 rounded-xl shadow-lg text-center flex-shrink-0 w-72 snap-start animate-on-scroll delay-3">
+  <div class="flex items-center justify-center h-16 w-16 rounded-full bg-rose-red text-white mx-auto mb-6">
+    <i class="fas fa-pencil-ruler fa-2x"></i>
+  </div>
+  <h3 class="text-xl font-bold text-navy">Design</h3>
+  <p class="mt-2 text-slate-500">Crafting intuitive interfaces and user journeys through prototypes and wireframes.</p>
+</div>
+
+<!-- 5. Development -->
+<div class="bg-white p-8 rounded-xl shadow-lg text-center flex-shrink-0 w-72 snap-start animate-on-scroll delay-4">
+  <div class="flex items-center justify-center h-16 w-16 rounded-full bg-rose-red text-white mx-auto mb-6">
+    <i class="fas fa-code fa-2x"></i>
+  </div>
+  <h3 class="text-xl font-bold text-navy">Development</h3>
+  <p class="mt-2 text-slate-500">Building robust solutions using agile sprints and modular engineering.</p>
+</div>
+
+<!-- 6. Test -->
+<div class="bg-white p-8 rounded-xl shadow-lg text-center flex-shrink-0 w-72 snap-start animate-on-scroll delay-5">
+  <div class="flex items-center justify-center h-16 w-16 rounded-full bg-rose-red text-white mx-auto mb-6">
+    <i class="fas fa-vial fa-2x"></i>
+  </div>
+  <h3 class="text-xl font-bold text-navy">Test</h3>
+  <p class="mt-2 text-slate-500">Verifying performance, reliability, and user experience through rigorous testing.</p>
+</div>
+
+<!-- 7. Incubation -->
+<div class="bg-white p-8 rounded-xl shadow-lg text-center flex-shrink-0 w-72 snap-start animate-on-scroll delay-6">
+  <div class="flex items-center justify-center h-16 w-16 rounded-full bg-rose-red text-white mx-auto mb-6">
+    <i class="fas fa-seedling fa-2x"></i>
+  </div>
+  <h3 class="text-xl font-bold text-navy">Incubation</h3>
+  <p class="mt-2 text-slate-500">Refining and nurturing early-stage products with mentoring and iteration.</p>
+</div>
+
+<!-- 8. Patent -->
+<div class="bg-white p-8 rounded-xl shadow-lg text-center flex-shrink-0 w-72 snap-start animate-on-scroll delay-7">
+  <div class="flex items-center justify-center h-16 w-16 rounded-full bg-rose-red text-white mx-auto mb-6">
+    <i class="fas fa-certificate fa-2x"></i>
+  </div>
+  <h3 class="text-xl font-bold text-navy">Patent</h3>
+  <p class="mt-2 text-slate-500">Protecting intellectual property and ensuring legal ownership of innovations.</p>
+</div>
+
+<!-- 9. Funding -->
+<div class="bg-white p-8 rounded-xl shadow-lg text-center flex-shrink-0 w-72 snap-start animate-on-scroll delay-8">
+  <div class="flex items-center justify-center h-16 w-16 rounded-full bg-rose-red text-white mx-auto mb-6">
+    <i class="fas fa-hand-holding-usd fa-2x"></i>
+  </div>
+  <h3 class="text-xl font-bold text-navy">Funding</h3>
+  <p class="mt-2 text-slate-500">Securing financial support through grants, sponsorships, or investments.</p>
+</div>
+
+<!-- 10. Deployment -->
+<div class="bg-white p-8 rounded-xl shadow-lg text-center flex-shrink-0 w-72 snap-start animate-on-scroll delay-9">
+  <div class="flex items-center justify-center h-16 w-16 rounded-full bg-rose-red text-white mx-auto mb-6">
+    <i class="fas fa-cloud-upload-alt fa-2x"></i>
+  </div>
+  <h3 class="text-xl font-bold text-navy">Deployment</h3>
+  <p class="mt-2 text-slate-500">Releasing validated products to users with monitoring, feedback, and support.</p>
+</div>
+
+
+        <!-- Continue other services in the same format -->
+        <!-- ... Design, Development, Test, Incubation, Patent, Funding, Deployment ... -->
+
       </div>
     </div>
   </div>
 </section>
+
         
         <section class="bg-navy">
             <div class="max-w-4xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8 animate-on-scroll">
