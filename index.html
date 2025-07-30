@@ -102,6 +102,28 @@
 .hide-scrollbar::-webkit-scrollbar {
   display: none;             /* Chrome, Safari, Opera */
 }
+@keyframes scroll-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: scroll-marquee 30s linear infinite;
+}
+
+.gallery-marquee {
+  display: flex;
+  white-space: nowrap;
+}
+
+.animate-gallery-marquee:hover {
+  animation-play-state: paused;
+}
+
 
 
     </style>
@@ -370,9 +392,9 @@
                     <div class="flex flex-col md:flex-row items-center gap-8">
                         <img src="Venkat sir.jpg" alt="Director Dr.D. Venkat" class="w-40 h-40 rounded-full object-cover shadow-md flex-shrink-0">
                         <div class="text-center md:text-left">
-                            <h3 class="text-2xl font-bold text-navy">Dr.D. VENKATA SUBRAMANIAN, B.E, M.S. (Engg., USA), Ph.D, P.D.F</h3>
+                            <h3 class="text-2xl font-bold text-navy">Dr.D. Venkata Subramanian, B.E, M.S. (Engg., USA), Ph.D, P.D.F</h3>
                             <p class="font-semibold text-rose-red">Agile Director & Founder</p>
-                            <p class="mt-3 text-slate-600">Dr. D. Venkat leads the agile development initiatives, fostering innovation in both academic and administrative operations. He works to implement agile methodologies that enhance efficiency, collaboration, and continuous improvement across all college functions, ensuring the college adopts modern, flexible approaches to project management.</p>
+                            <p class="mt-3 text-slate-600">Dr. D. Venkata Subramanian leads the agile development initiatives, fostering innovation in both academic and administrative operations. He works to implement agile methodologies that enhance efficiency, collaboration, and continuous improvement across all college functions, ensuring the college adopts modern, flexible approaches to project management.</p>
                         </div>
                     </div>
                 </div>
@@ -412,6 +434,93 @@
     </div>
 
     <div id="features-page" class="page-section">
+        <section class="py-10 bg-white  border-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll">
+    <h2 class="text-3xl sm:text-4xl font-bold text-rose-red text-center mb-8">Student Achievements Gallery</h2>
+
+    <div class="overflow-hidden relative">
+      <div class="gallery-marquee flex gap-10 w-max animate-marquee">
+        <!-- Repeat images twice for seamless loop -->
+
+        <!-- First Set -->
+        <div class="flex items-center gap-10">
+          <div class="flex flex-col items-center">
+            <img src="st ach1.jpg" alt="Achievement 1" class="w-64 h-40 object-cover rounded-lg shadow-md" />
+            <p class="text-sm text-slate-600 mt-2">🏆 2023</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <img src="st ach2.png" alt="Achievement 2" class="w-64 h-40 object-cover rounded-lg shadow-md" />
+            <p class="text-sm text-slate-600 mt-2">📜 2023</p>
+          </div>
+          <!-- Add all 15 images like this -->
+        </div>
+
+        <!-- Second Set (Duplicate for seamless infinite scroll) -->
+        <div class="flex items-center gap-10">
+          <div class="flex flex-col items-center">
+            <img src="st ach3.jpg" alt="Achievement 1" class="w-64 h-40 object-cover rounded-lg shadow-md" />
+            <p class="text-sm text-slate-600 mt-2">🏆 2022</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <img src="st ach4.jpg" alt="Achievement 2" class="w-64 h-40 object-cover rounded-lg shadow-md" />
+            <p class="text-sm text-slate-600 mt-2">📜 2022</p>
+          </div>
+          <!-- Repeat all 15 again -->
+        </div>
+        <!-- First Set -->
+        <div class="flex items-center gap-10">
+          <div class="flex flex-col items-center">
+            <img src="st ach5.jpg" alt="Achievement 1" class="w-64 h-40 object-cover rounded-lg shadow-md" />
+            <p class="text-sm text-slate-600 mt-2">🏆 2022</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <img src="st ach6.jpg" alt="Achievement 2" class="w-64 h-40 object-cover rounded-lg shadow-md" />
+            <p class="text-sm text-slate-600 mt-2">📜 2022</p>
+          </div>
+          <!-- Add all 15 images like this -->
+        </div>
+
+        <!-- Second Set (Duplicate for seamless infinite scroll) -->
+        <div class="flex items-center gap-10">
+          <div class="flex flex-col items-center">
+            <img src="st ach7.jpg" alt="Achievement 1" class="w-64 h-40 object-cover rounded-lg shadow-md" />
+            <p class="text-sm text-slate-600 mt-2">🏆 2021</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <img src="st ach8.jpg" alt="Achievement 2" class="w-64 h-40 object-cover rounded-lg shadow-md" />
+            <p class="text-sm text-slate-600 mt-2">📜 2021</p>
+          </div>
+          <!-- Repeat all 15 again -->
+        </div>
+        <!-- First Set -->
+        <div class="flex items-center gap-10">
+          <div class="flex flex-col items-center">
+            <img src="st ach9.jpg" alt="Achievement 1" class="w-64 h-40 object-cover rounded-lg shadow-md" />
+            <p class="text-sm text-slate-600 mt-2">🏆 2021</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <img src="st ach10.jpg" alt="Achievement 2" class="w-64 h-40 object-cover rounded-lg shadow-md" />
+            <p class="text-sm text-slate-600 mt-2">📜 2021</p>
+          </div>
+          <!-- Add all 15 images like this -->
+        </div>
+        <!-- Second Set (Duplicate for seamless infinite scroll) -->
+        <div class="flex items-center gap-10">
+          <div class="flex flex-col items-center">
+            <img src="st ach11" alt="Achievement 1" class="w-64 h-40 object-cover rounded-lg shadow-md" />
+            <p class="text-sm text-slate-600 mt-2">🏆 2021</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <img src="st ach11.jpg" alt="Achievement 2" class="w-64 h-40 object-cover rounded-lg shadow-md" />
+            <p class="text-sm text-slate-600 mt-2">📜 2021/p>
+          </div>
+          <!-- Repeat all 15 again -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
         <section class="py-20 lg:py-24">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center animate-on-scroll">
